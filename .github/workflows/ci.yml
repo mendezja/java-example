@@ -1,0 +1,14 @@
+name: CI
+on:  push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+         java-vesion: '11'
+        distribution: 'termurin'
+    - name: Test
+       run: mvn test
