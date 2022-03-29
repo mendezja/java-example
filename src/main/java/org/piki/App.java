@@ -9,6 +9,7 @@ public class App {
     }
 
     public static int fibonacci(int n) {
+        if n<=1 return n;
         if (n <= 2) return 1;
 
         int a = 1, b = 1;
